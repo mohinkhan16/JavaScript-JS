@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to add js</title>
+    <!-- <script src="index.js"></script>  Extrnal addeding js  -->
+</head>
+<body>
+
+    <h1 id="login">login</h1>
+    <button id="click">click</button>
+
+    <script>
+        document.getElementById("click").addEventListener("click",function(){
+            document.getElementById("login").innerText="Register";
+        });
+    </script> 
+    
+    <!-- <script src="index.js"  defer></script> -->
+</body>
+</html>
