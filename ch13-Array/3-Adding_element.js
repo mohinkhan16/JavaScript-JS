@@ -29,3 +29,28 @@ let frutes=["Banana","cherry","apple"];
 frutes.shift();
 
 console.log("After shift",frutes)
+
+//splice:-add,remove and replace.
+//Add
+
+let vegetable=["Tamato","Bringel","carrot"];
+
+vegetable.splice(1,0,"Potato");
+
+console.log(vegetable);
+
+//Remove
+
+let color=["red","green","yellow","brown","white"];
+
+color.splice(1,2);
+
+console.log(color);
+
+//Replace
+
+let student =["Moksh","Arun","Kishan","Vaibhav"];
+
+student.splice(1,1,"Mitansh");
+
+console.log(student);
