@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(-45deg,#667eea,#764ba2,#00c6ff,#ff6b6b);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+form{
+    width:600px;
+    padding:35px;
+    text-align:center;
+    background: linear-gradient(135deg,#ffffff,#e0f2fe);
+    border-radius:15px;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.25),
+        inset 0 0 30px rgba(102,126,234,0.25);
+    animation: cardPop 1s ease;
+}
+
+@keyframes cardPop{
+    from{
+        transform:translateY(-100px) scale(0.9);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+}
+
+h1{
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.title{
+    color:#64748b;
+    margin-bottom:25px;
+}
+
+button{
+    padding:14px 25px;
+    font-size:17px;
+    border:none;
+    border-radius:8px;
+    background: linear-gradient(45deg,#667eea,#764ba2);
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#result{
+    margin-top:25px;
+    font-size:20px;
+    font-weight:bold;
+    color:#0f172a;
+    line-height:1.8;
+}

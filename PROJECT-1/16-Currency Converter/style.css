@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height:100vh;
+    background: linear-gradient(270deg,#6a11cb,#2575fc,#ff512f,#dd2476);
+    background-size:600% 600%;
+    animation: gradientMove 10s ease infinite;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    background: rgba(255,255,255,0.15);
+    padding:35px;
+    width:340px;
+    border-radius:18px;
+    box-shadow:0 25px 40px rgba(0,0,0,0.4);
+    animation: zoomIn 0.8s ease;
+}
+
+@keyframes zoomIn{
+    from{transform:scale(0.6);opacity:0;}
+    to{transform:scale(1);opacity:1;}
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#fff;
+    letter-spacing:1px;
+}
+
+label{
+    color:#fff;
+    font-size:14px;
+    margin-top:12px;
+    display:block;
+}
+
+
+input,select{
+    width:100%;
+    padding:12px;
+    margin-top:6px;
+    border:none;
+    border-radius:10px;
+    background:rgba(255,255,255,0.9);
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus,select:focus{
+    box-shadow:0 0 10px #fff;
+    transform:scale(1.03);
+}
+
+/* Neon Button */
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    color:#fff;
+    background: linear-gradient(135deg,#00f2fe,#4facfe);
+    cursor:pointer;
+    transition:0.4s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px #00f2fe;
+}
+
+
+#result{
+    margin-top:18px;
+    text-align:center;
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}

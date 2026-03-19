@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
+    overflow:hidden;
+}
+
+.container{
+    perspective: 1000px;
+}
+
+
+form{
+    width:360px;
+    padding:40px 30px;
+    border-radius:25px;
+    text-align:center;
+    background: rgba(255,255,255,0.05);
+    border: 2px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 20px rgba(255,255,255,0.1), 0 0 40px #ff00ff50, 0 0 60px #00ffff50;
+    transition:0.5s;
+    animation: cardBounce 6s ease-in-out infinite;
+}
+
+
+form:hover{
+    transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 0 30px #ff00ff80, 0 0 60px #00ffff80, 0 0 80px rgba(255,255,255,0.3);
+}
+
+
+@keyframes cardBounce{
+    0%{transform: translateY(0px) rotateX(0deg);}
+    25%{transform: translateY(-10px) rotateX(1deg);}
+    50%{transform: translateY(0px) rotateX(0deg);}
+    75%{transform: translateY(-5px) rotateX(-1deg);}
+    100%{transform: translateY(0px) rotateX(0deg);}
+}
+
+.title{
+    font-size:28px;
+    font-weight:700;
+    color:#fff;
+    margin-bottom:25px;
+    letter-spacing:1px;
+    text-shadow:0 0 5px #ff00ff, 0 0 10px #00ffff;
+}
+
+.title span{
+    font-size:18px;
+    font-weight:400;
+    color:#d0d0d0;
+    text-shadow: 0 0 2px #00ffff;
+}
+
+.input{
+    width:100%;
+    padding:14px;
+    margin-bottom:20px;
+    border-radius:12px;
+    border:none;
+    outline:none;
+    font-size:15px;
+    background: rgba(255,255,255,0.15);
+    color:#fff;
+    transition:0.3s;
+}
+
+.input::placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+.input:focus{
+    transform: scale(1.05);
+    box-shadow:0 0 15px #00ffff, 0 0 25px #ff00ff;
+}
+
+/* Button */
+.button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:15px;
+    background: linear-gradient(45deg,#ff00ff,#00ffff);
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.4s;
+    text-shadow:0 0 5px #000;
+}
+
+.button:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 20px #ff00ff, 0 0 25px #00ffff, 0 0 40px #ffffff50;
+}
+
+#result{
+    margin-top:18px;
+    font-size:18px;
+    font-weight:600;
+    color:#fff;
+    min-height:25px;
+    text-shadow:0 0 5px #00ffff;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}

@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff6a88, #ffb88c, #ffe0ac, #d0a6f4);
+    overflow: hidden;
+}
+
+.form-container{
+    width: 350px;
+    background: rgba(20,0,40,0.85);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(255,105,180,0.5), 0 0 50px rgba(208,166,244,0.3);
+    animation: cardFloat 6s ease-in-out infinite;
+}
+
+@keyframes cardFloat{
+    0%{transform: translateY(0px) rotate(-2deg);}
+    25%{transform: translateY(-8px) rotate(1deg);}
+    50%{transform: translateY(0px) rotate(-1deg);}
+    75%{transform: translateY(-6px) rotate(2deg);}
+    100%{transform: translateY(0px) rotate(0deg);}
+}
+
+h2{
+    margin-bottom: 20px;
+    color: #ff66cc;
+    text-shadow: 0 0 8px #ff66cc, 0 0 20px #d0a6f4;
+}
+
+label{
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    color: #ffb3ff;
+}
+
+input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #d0a6f4;
+    background: rgba(40,0,60,0.8);
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input::placeholder{
+    color: #ccc;
+}
+
+input:focus{
+    border-color: #ff66cc;
+    box-shadow:0 0 10px #ff66cc, 0 0 20px #d0a6f4;
+    transform: scale(1.02);
+}
+
+button{
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #ff66cc, #d0a6f4);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.4s;
+    box-shadow: 0 0 10px #ff66cc, 0 0 20px #d0a6f4;
+}
+
+button:hover{
+    background: linear-gradient(45deg, #d0a6f4, #ff66cc);
+    transform: scale(1.05);
+    box-shadow:0 0 15px #ff66cc, 0 0 30px #d0a6f4;
+}
+
+#result{
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffe0ac;
+    text-shadow: 0 0 5px #ffb3ff;
+}
