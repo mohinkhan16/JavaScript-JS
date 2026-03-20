@@ -1,3 +1,6 @@
+
+//cleartime out used to task can cancel and run another function
+
 let car=setTimeout(()=>{
     console.log("This is new car");
 },5000);
