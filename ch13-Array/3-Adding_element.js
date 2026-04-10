@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //push is use to add element et the end
 
  let heros=["Ironmen","Spidermen","Thor"];
@@ -110,5 +109,4 @@ let student =["Moksh","Arun","Kishan","Vaibhav"];
 
 student.splice(1,1,"Mitansh");
 
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff
 console.log(student);
