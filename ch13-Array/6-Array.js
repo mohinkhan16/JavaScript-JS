@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // JavaScript Array some() Method
 //some method give us output as a true false
 
@@ -50,5 +50,4 @@ console.log(student.reverse());
 
  for(key of herosIterator){
     console.log(key);
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff
  }
