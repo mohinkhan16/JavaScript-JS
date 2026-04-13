@@ -1,3 +1,4 @@
+
 const quizData = [
   {
     id: 1,
@@ -71,71 +72,130 @@ const quizData = [
   }
 ];
 
-let qusNumber = document.getElementById("qusNumber");
-let timer = document.getElementById("timer");
-let questions = document.getElementById("questions");
-let options = document.getElementById("options");
-let butSubmit = document.getElementById("submit");
+let currentQuestion = 0;
+let score = 0;
+// let timeLeft = 0;
+let timer;
+let userAnswers = []; 
 
-let currentIndex = 0;
+const questionEl = document.getElementById("question");
+const choicesEl = document.getElementById("choices");
+const nextBtn = document.getElementById("nextBtn");
+const resultEl = document.getElementById("result");
+const restartBtn = document.getElementById("restartBtn");
+const timeEl = document.getElementById("time");
+const quizContainer = document.getElementById("quiz");
 
 
-function quiz(){
+function startQuiz() {
+  currentQuestion = 0;
+  score = 0;
+  userAnswers = [];
 
-    let current=quizData[currentIndex]
+  quizContainer.classList.remove("hidden");
+  resultEl.classList.add("hidden");
+  restartBtn.classList.add("hidden");
 
-    questions.innerText=current.question
-
-    options.innerText = "";
-
-    current .options.forEach((opt)=>{
-
-        let col=document.createElement("div")
-
-        col.classList.add("col-md-6");
-
-        let button=document.createElement("button")
-
-        button.innerText=opt;
-
-        button.classList.add("btn","btn-outline-primary","option-btn");
-
-        col.appendChild(button);
-
-        options.appendChild(col)
-
-    })
+  showQuestion();
 }
 
-quiz();
+function showQuestion() {
+  clearInterval(timer);
+  timeLeft = 30;
+  timeEl.textContent = timeLeft;
+
+  const q = quizData[currentQuestion];
+  questionEl.textContent = q.question;
+
+  choicesEl.innerHTML = "";
+
+  q.options.forEach(choice => {
+    const btn = document.createElement("button");
+    btn.textContent = choice;
+
+    btn.addEventListener("click", () => selectAnswer(choice));
+
+    choicesEl.appendChild(btn);
+  });
+
+  startTimer();
+}
+
+function selectAnswer(selected) {
+  clearInterval(timer);
+
+  const correctAnswer = quizData[currentQuestion].answer;
+
+  
+  userAnswers[currentQuestion] = selected;
+
+  if (selected === correctAnswer) {
+    score++;
+  }
+
+  Array.from(choicesEl.children).forEach(btn => {
+    btn.disabled = true;
+    btn.style.opacity = "0.5";
+  });
+
+  setTimeout(() => {
+    nextQuestion();
+  }, 500);
+}
+
+function nextQuestion() {
+  currentQuestion++;
+
+  if (currentQuestion < quizData.length) {
+    showQuestion();
+  } else {
+    endQuiz();
+  }
+}
+
+function endQuiz() {
+  clearInterval(timer);
+  showResult(); 
+}
+
+function showResult() {
+  quizContainer.classList.add("hidden");
+
+  resultEl.innerHTML = `<h2>Your Score: ${score}/${quizData.length}</h2>`;
+
+  quizData.forEach((q, index) => {
+    let userAns = userAnswers[index] || "Not Attempted";
+
+    let div = document.createElement("div");
+
+    div.innerHTML = `
+      <h4>${index + 1}. ${q.question}</h4>
+      <p>Correct: ${q.answer}</p>
+      <p>Your: ${userAns}</p>
+      <hr>
+    `;
+
+    resultEl.appendChild(div);
+  });
+
+  resultEl.classList.remove("hidden");
+  restartBtn.classList.remove("hidden");
+}
 
 
-// let counter=0
+restartBtn.addEventListener("click", startQuiz);
+nextBtn.addEventListener("click", nextQuestion);
 
-// function next(){
-//     if(quizData.length > currentIndex){
-//         currentIndex++;
-//         qusCounter++
+startQuiz();
+
+// function startTimer() {
+//   timer = setInterval(() => {
+//     timeLeft--;
+//     timeEl.textContent = timeLeft;
+
+//     if (timeLeft === 0) {
+//       clearInterval(timer);
+//       nextQuestion();
 //     }
-
-// qusNumber.innerHTML =`Qns $ {qunCounter}/10`;
-
-// quiz()
-
+//   }, 1000);
 // }
-
-let counter = 0;
-
-
-function next(){
-    if(quizData.length > currentIndex){
-        currentIndex++;
-        counter++;
-    }
-
-    qusNumber.innerText = `Qns ${counter}/10`;
-
-    quiz();
-}
-
-next()
