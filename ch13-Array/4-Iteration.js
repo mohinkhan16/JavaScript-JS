@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //iteration array
 
 let bike=["Honda","Suzuki","Splender","Activa","KTM","BMW","Yamaha"];
@@ -72,5 +71,4 @@ console.log(Mixed);
 
 //Array into string
 
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff
 console.log(fruit.toString())

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.getElementById("form").addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -35,3 +36,42 @@ document.getElementById("form").addEventListener("submit", async (e) => {
     }
 });
 
+=======
+document.getElementById("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    try {
+        const movieName = document.getElementById("movie").value;
+
+         const container = document.getElementById("container");
+
+
+    const response = await fetch(
+      `https://www.omdbapi.com/?apikey=thewdb&s=${movieName}`,
+    );
+
+
+        const data = await response.json();
+
+        console.log(data);
+
+        if (data.Response ==="True"){
+            data.Search.forEach((movie) => {
+                const img=document.createElement("img");
+
+                img.src=movie.Poster;
+                img.alt=movie.Title;
+                img.style.width="150px";
+                img.style.margin="10px";
+
+             container.appendChild(img);
+            });
+        }else{
+            container.innerHTML=`<h1> not found</h1`;
+        }
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+>>>>>>> adad84205beffcd754155409d8df8f20af39a573

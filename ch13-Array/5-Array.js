@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 //Join Method
 //this join method retrun new string and convert array into string.
@@ -85,5 +84,3 @@ console.log(fruites);
 
 console.log(fruites.slice(2,5));
 
-
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff
