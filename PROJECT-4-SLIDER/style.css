@@ -1,0 +1,41 @@
+body {
+    background-color: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 900px;   
+    max-width: 95%;
+    padding: 0 80px;
+}
+
+#img {
+    width: 100%;
+    height: 450px;   
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    border: none;
+    color: white;
+   
+}
+
+#BehindImage {
+    left: -60px;
+    background-color: #8b5cf6;
+}
+
+#NextImage {
+    right: -60px;
+    background-color:#7c3aed ;
+}
+
