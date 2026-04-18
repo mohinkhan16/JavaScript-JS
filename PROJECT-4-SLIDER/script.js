@@ -1,5 +1,4 @@
 const Images=[
-    "https://images.pexels.com/photos/28587130/pexels-photo-28587130.jpeg?_gl=1*4v2a1b*_ga*NDY5MDA4MTExLjE3NTk2NzIxMzg.*_ga_8JE65Q40S6*czE3NzYzMjkzNTgkbzckZzEkdDE3NzYzMjk0MDUkajEzJGwwJGgw",
     "https://images.pexels.com/photos/13348136/pexels-photo-13348136.jpeg?_gl=1*16jlxux*_ga*NDY5MDA4MTExLjE3NTk2NzIxMzg.*_ga_8JE65Q40S6*czE3NzYzMjkzNTgkbzckZzEkdDE3NzYzMjk0NjMkajUzJGwwJGgw",
     "https://images.pexels.com/photos/30299891/pexels-photo-30299891.jpeg?_gl=1*4ub9gk*_ga*NDY5MDA4MTExLjE3NTk2NzIxMzg.*_ga_8JE65Q40S6*czE3NzYzMjkzNTgkbzckZzEkdDE3NzYzMjk1MTckajU5JGwwJGgw",
    "https://images.pexels.com/photos/12735797/pexels-photo-12735797.jpeg?_gl=1*mgcrwc*_ga*NDY5MDA4MTExLjE3NTk2NzIxMzg.*_ga_8JE65Q40S6*czE3NzYzMjkzNTgkbzckZzEkdDE3NzYzMjk1NTIkajI0JGwwJGgw",
@@ -20,6 +19,7 @@ function main(){
 ImgE1.src=Images[index];
 
 }
+main()
 function BehindImage(){
     
     index--;
