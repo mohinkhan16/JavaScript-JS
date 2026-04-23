@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const person={
     Name:"Mohin",
     LastName:"khan",
@@ -28,7 +28,7 @@ hotel.prototype.SwimmingPool=true;
 
 const hotel1= new hotel(50,30,44);
 
-=======
+
 const person={
     Name:"Mohin",
     LastName:"khan",
@@ -58,5 +58,4 @@ hotel.prototype.SwimmingPool=true;
 
 const hotel1= new hotel(50,30,44);
 
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff
 console.log(hotel1.SwimmingPool);

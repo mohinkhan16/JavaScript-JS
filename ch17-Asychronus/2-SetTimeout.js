@@ -1,9 +1,6 @@
 
 
 
-
-
-
 const checkDate=()=>{
     console.log("checking current date..");
 

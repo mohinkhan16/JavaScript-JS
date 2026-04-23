@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 // promise definition  :- promise is a object represents the eventual completion or failure of an asynchronous operation and its resulting value 
 
@@ -30,7 +29,7 @@ items
   })
   .catch((err) => {
     console.log(err);
-=======
+
 
 // promise definition  :- promise is a object represents the eventual completion or failure of an asynchronous operation and its resulting value 
 
@@ -62,5 +61,4 @@ items
   })
   .catch((err) => {
     console.log(err);
->>>>>>> adad84205beffcd754155409d8df8f20af39a573
   });

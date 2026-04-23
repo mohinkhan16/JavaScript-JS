@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
  var greet ="good morning";
 
@@ -15,8 +15,6 @@ console.log(greet);
 greet="Good night";
 console.log(greet);
 
-=======
-
  var greet ="good morning";
 
 function Name(){
@@ -32,5 +30,4 @@ console.log(greet);
 greet="Good night";
 console.log(greet);
 
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff
 Name();

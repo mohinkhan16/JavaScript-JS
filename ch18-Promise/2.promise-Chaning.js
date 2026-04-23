@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // Promise chaining means executing asynchronous operations one after another.
 //producing code
 
@@ -62,8 +62,8 @@ return new Promise ((resolve,reject)=>{
     console.log("Process complete");
 })
 
-=======
-// Promise chaining means executing asynchronous operations one after another.
+
+// Promise chaining means executing asynchronous operations one after another.  
 //producing code
 
 const car = new Promise((resolve,reject)=>{
@@ -126,4 +126,4 @@ return new Promise ((resolve,reject)=>{
     console.log("Process complete");
 })
 
->>>>>>> adad84205beffcd754155409d8df8f20af39a573
+

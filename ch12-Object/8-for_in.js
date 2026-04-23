@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 //Example 1
 const Frutes={
@@ -22,7 +22,7 @@ const Person={
 
 for(let key in Person){
     console.log(key + ":"+Person[key]);
-=======
+}
 
 //Example 1
 const Frutes={
@@ -46,5 +46,5 @@ const Person={
 
 for(let key in Person){
     console.log(key + ":"+Person[key]);
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff
+
 }

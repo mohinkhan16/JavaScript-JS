@@ -188,14 +188,14 @@ nextBtn.addEventListener("click", nextQuestion);
 
 startQuiz();
 
-// function startTimer() {
-//   timer = setInterval(() => {
-//     timeLeft--;
-//     timeEl.textContent = timeLeft;
+ function startTimer() {
+   timer = setInterval(() => {
+     timeLeft--;
+     timeEl.textContent = timeLeft;
 
-//     if (timeLeft === 0) {
-//       clearInterval(timer);
-//       nextQuestion();
-//     }
-//   }, 1000);
-// }
+     if (timeLeft === 0) {
+       clearInterval(timer);
+      nextQuestion();
+    }
+   }, 1000);
+}

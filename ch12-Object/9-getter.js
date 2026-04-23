@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 //getter   Example no:-1
 
@@ -27,7 +27,7 @@ let Price={
 
 console.log(Price.Fullprice)
 
-=======
+
 
 //getter   Example no:-1
 
@@ -56,4 +56,3 @@ let Price={
 
 console.log(Price.Fullprice)
 
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff

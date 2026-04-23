@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 //First / last and modification in js..
 
@@ -22,7 +22,7 @@ let vegetable=["Potato","Tamota","Onine","Gralic"];
 
 vegetable[3]="carrot";
 
-=======
+
 
 //First / last and modification in js..
 
@@ -46,5 +46,4 @@ let vegetable=["Potato","Tamota","Onine","Gralic"];
 
 vegetable[3]="carrot";
 
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff
 console.log("After modification",vegetable);

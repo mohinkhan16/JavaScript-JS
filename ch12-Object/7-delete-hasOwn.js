@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 //delete key word use for deleteing some part of the object. 
 
@@ -32,7 +31,7 @@ console.log(Object.keys(Person));
 
 //value
 
-=======
+
 
 //delete key word use for deleteing some part of the object. 
 
@@ -66,5 +65,4 @@ console.log(Object.keys(Person));
 
 //value
 
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff
 console.log(Object.values(Person));

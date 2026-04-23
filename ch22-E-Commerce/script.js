@@ -109,3 +109,9 @@ products.forEach((p)=>{
     </div>
     `;
 })
+
+const  data={ name:"electronic",qty:1};
+localStorage.setItem("cartData",JSON.stringify(data));
+
+const productData=localStorage.getItem("cartData");
+console.log("productData",JSON.parse(productData));

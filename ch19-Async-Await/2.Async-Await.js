@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //this is a example of a async-await...
 
 const items =()=>{
@@ -18,7 +18,7 @@ async function fetchData() {
     console.log(Data);
 }
 
-=======
+
 //this is a example of a async-await...
 
 const items =()=>{
@@ -38,5 +38,5 @@ async function fetchData() {
     console.log(Data);
 }
 
->>>>>>> adad84205beffcd754155409d8df8f20af39a573
+
 fetchData();

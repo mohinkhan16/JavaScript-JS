@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 //creating object using function constructor
 function PersonDetails(name, id, age, surname){
@@ -14,7 +14,6 @@ console.log("this is person 1 details",PersonDetails1);
 
 const PersonDetails2 = new PersonDetails("Ajay", 102, 21, "A");
 
-=======
 
 //creating object using function constructor
 function PersonDetails(name, id, age, surname){
@@ -30,5 +29,4 @@ console.log("this is person 1 details",PersonDetails1);
 
 const PersonDetails2 = new PersonDetails("Ajay", 102, 21, "A");
 
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff
 console.log("this is person 2 details",PersonDetails2)
