@@ -110,8 +110,39 @@ products.forEach((p)=>{
     `;
 })
 
-const  data={ name:"electronic",qty:1};
-localStorage.setItem("cartData",JSON.stringify(data));
+//local Storage.
 
-const productData=localStorage.getItem("cartData");
-console.log("productData",JSON.parse(productData));
+// const  data={ name:"electronic",qty:1};
+// localStorage.setItem("cartData",JSON.stringify(data));
+
+// const productData=localStorage.getItem("cartData");
+// console.log("productData",JSON.parse(productData));
+
+let cartItems=JSON.parse(localStorage.getItem("cartData"))||[];
+console.log("cartitems",cartItems);
+
+function addToCart(id) {
+  try {
+    let product = cartItems.find((p) => p.id === id);
+
+    console.log("product already added", product);
+
+    if (product) {
+      product.qty++;
+    } else {
+      product = products.find((p) => p.id === id);
+
+      cartItems.push({ ...product, qty: 1 });
+
+      console.log("product new added", product);
+    }
+
+    localStorage.setItem("cartData", JSON.stringify(cartItems));
+
+    alert("item added in cart");
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+ 
