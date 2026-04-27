@@ -45,50 +45,49 @@ function showOutput(data) {
   }
 }
 
-document.getElementById("pushBtn").onclick = () => {
+function Push() {
   let arr = getValues();
   let val = prompt("Enter value");
   if (val !== "" && !isNaN(val)) arr.push(Number(val));
   showOutput(arr);
-};
+}
 
-document.getElementById("popBtn").onclick = () => {
+function Pop() {
   let arr = getValues();
   arr.pop();
   showOutput(arr);
-};
+}
 
-document.getElementById("shiftBtn").onclick = () => {
+function Shift() {
   let arr = getValues();
   arr.shift();
   showOutput(arr);
-};
+}
 
-document.getElementById("unshiftBtn").onclick = () => {
+function Unshift() {
   let arr = getValues();
   let val = prompt("Enter value");
   if (val !== "" && !isNaN(val)) arr.unshift(Number(val));
   showOutput(arr);
-};
+}
 
-document.getElementById("reverseBtn").onclick = () => {
+function Reverse() {
   let arr = getValues();
   arr.reverse();
   showOutput(arr);
-};
+}
 
-document.getElementById("sortBtn").onclick = () => {
+function Sort() {
   let arr = getValues();
   arr.sort((a, b) => a - b);
   showOutput(arr);
-};
+}
 
-document.getElementById("jointBtn").onclick = () => {
+function Join() {
   let arr = getValues();
   showOutput("Joined: " + arr.join(" - "));
-};
+}
 
-document.getElementById("clearBtn").onclick = () => {
+function Clear() {
   document.getElementById("output").innerHTML = "";
-};
-
+}
