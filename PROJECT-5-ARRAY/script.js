@@ -88,6 +88,59 @@ function Join() {
   showOutput("Joined: " + arr.join(" - "));
 }
 
+function some() {
+  let arr = getValues();
+  let result = arr.some(num => num > 10);
+  showOutput("Some > 10: " + result);
+}
+
+function find() {
+  let arr = getValues();
+  let val = prompt("Enter value to find");
+  let result = arr.find(num => num == val);
+  
+  if (result !== undefined) {
+    showOutput("Found: " + result);
+  } else {
+    showOutput("Not Found");
+  }
+}
+
+function Ascending() {
+  let arr = getValues();
+  arr.sort((a, b) => a - b);
+  showOutput("Ascending: " + arr.join(", "));
+}
+
+function Descending() {
+  let arr = getValues();
+  arr.sort((a, b) => b - a);
+  showOutput("Descending: " + arr.join(", "));
+}
+
+function length() {
+  let arr = getValues();
+  showOutput("Length: " + arr.length);
+}
+
+function Map() {
+  let arr = getValues();
+  let result = arr.map(num => num * 2); 
+  showOutput("Map : [ " + result.join(", ") + " ]");
+}
+
+function Filter() {
+  let arr = getValues();
+  let result = arr.filter(num => num > 10); 
+  showOutput("Filter : [ " + result.join(", ") + " ]");
+}
+
+function Reduce() {
+  let arr = getValues();
+  let result = arr.reduce((acc, curr) => acc + curr, 0); 
+  showOutput("Reduce : " + result);
+}
+
 function Clear() {
   document.getElementById("output").innerHTML = "";
 }
