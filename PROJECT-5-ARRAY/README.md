@@ -4,7 +4,7 @@ A simple and interactive **Array Operations Web App** built using **HTML, CSS (B
 This project helps you understand and practice JavaScript array methods in a visual and hands-on way.
 
 ---
-Live Link:-
+Live Link:-https://singular-fenglisu-8af14a.netlify.app/
 ---
 
 ## 🚀 Features
