@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 
 // function declaration
 
@@ -38,5 +36,4 @@ function addition (a=5,b=10){
 }
 
 addition();
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff
 addition(10,20);
