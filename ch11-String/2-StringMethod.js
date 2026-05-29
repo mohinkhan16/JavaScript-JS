@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // 1:-  Match method
   //Match method is use for give us to full details and
   //   //  also give index if is it no working then he give us to Null output.
@@ -191,5 +191,3 @@ console.log("Trim:-",remove.trimStart().length);
 console.log("Trim:-",remove.trimEnd().length);
 
 
-
->>>>>>> ebcb54a8f2fc9f65ec674abe7f05616885dec8ff
